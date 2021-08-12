@@ -1,0 +1,16 @@
+秘密鍵ファイルを移動
+mv 秘密鍵ファイルの場所 ~/.ssh
+mv /Users/username/Downloads/○○○.pem ~/.ssh
+
+秘密鍵使用権限を付与
+chmod 600 秘密鍵ファイルの場所
+chmod 600 /Users/username/.ssh/○○○.pem
+
+
+ssh User名@IPアドレス -i 秘密鍵
+ssh ec2-user@xx.xx.xx.xx -i ~/.ssh/○○○.pem
+（User名の初期設定：ec2-user）
+
+踏み台サーバ（X）を経由してAにアクセスしたい場合
+ssh -oProxyCommand='ssh -W %h:%p X' A
+ssh -oProxyCommand='ssh -W %h:%p ec2-user@xx.xx.xx.xx -i ~/.ssh/○○○.pem' ec2-user@yy.yy.yy.yy -i ~/.ssh/△△△.pem
