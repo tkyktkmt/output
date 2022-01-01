@@ -1,6 +1,6 @@
 git add ファイル名
 変更をステージ
 
-他者がリモートのmainブランチを更新2→2
+他者がリモートのmainブランチを更新2→3
 
 fetch origin main
