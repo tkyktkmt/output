@@ -6,4 +6,4 @@ git add ファイル名
 
 fetch origin main
 
-rebase test2
+rebase test3
