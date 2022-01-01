@@ -5,3 +5,5 @@ git add ファイル名
 他者がリモートのmainブランチを更新2→3
 
 fetch origin main
+
+rebase test
