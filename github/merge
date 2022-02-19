@@ -1,0 +1,16 @@
+役割）
+  引数に指定したローカルにあるブランチを、現在いるブランチに取り込む
+  引数にはリモート追跡ブランチを含め、全てのローカルブランチを指定可能
+
+文法）
+  git merge <ブランチ名>
+  
+例1）
+  リモートoriginのdevelopブランチを追跡するブランチであるorigin/developをローカルのdevelopブランチにマージ
+  git checkout develop # ローカルのdevelopブランチに移動
+  git merge origin/develop
+
+例2）
+  例1)のブランチ状態に続けて、ローカルのdevelopブランチをローカルのmasterブランチにマージ
+  git checkout master # ローカルのmasterブランチに移動
+  git merge develop
